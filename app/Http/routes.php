@@ -14,7 +14,7 @@ Route::pattern('slug', '[0-9a-z-_]+');
 Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
 Route::get('about', 'PagesController@about');
-Route::get('contact', 'PagesController@contact');
+Route::get('contact', 'ContactController@index');
 Route::get('articles', 'ArticlesController@index');
 Route::get('article/{slug}', 'ArticlesController@show');
 Route::get('video/{id}', 'VideoController@show');

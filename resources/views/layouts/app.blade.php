@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@section('title') Laravel 5 Sample Site @show</title>
+    <title>@section('title') b etheridge @show</title>
     @section('meta_keywords')
-        <meta name="keywords" content="your, awesome, keywords, here"/>
+        <meta name="keywords" content=""/>
     @show @section('meta_author')
-        <meta name="author" content="Jon Doe"/>
+        <meta name="author" content="Brian Etheridge"/>
     @show @section('meta_description')
-        <meta name="description"
-              content="Lorem ipsum dolor sit amet, nihil fabulas et sea, nam posse menandri scripserit no, mei."/>
+        <meta name="description" content=""/>
     @show
 
 		<link href="{{ asset('css/site.css') }}" rel="stylesheet">
@@ -32,12 +31,11 @@
 @include('partials.nav')
 
 <div class="container">
-@yield('content')
+    @yield('content')
 </div>
+
 @include('partials.footer')
 
-<!-- Scripts -->
 @yield('scripts')
-
 </body>
 </html>

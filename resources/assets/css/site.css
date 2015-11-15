@@ -1,0 +1,11 @@
+/*!
+ * Custom classes
+ */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 644px;
+    height: 20px;
+    margin: 0 0 25px 30px;
+}
