@@ -8,3 +8,5 @@ Homestead.json
 .env.php
 .env
 
+/storage/logs
+

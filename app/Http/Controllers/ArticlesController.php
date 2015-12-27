@@ -20,5 +20,4 @@ class ArticlesController extends Controller {
 
 		return view('article.view', compact('article'));
 	}
-
 }
