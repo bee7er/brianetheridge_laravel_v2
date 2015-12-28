@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Article;
 use App\ArticleCategory;
 use App\Language;
+use App\Helpers\CsvLogger\CsvLogger;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\Admin\ArticleRequest;
 use Illuminate\Support\Facades\Auth;
@@ -24,6 +25,7 @@ class ArticleController extends AdminController {
     */
     public function index()
     {
+        CsvLogger::csv('In article index', [], CsvLogger::INFO, CsvLogger::DEBUG);
         // Show the page
         return view('admin.article.index');
     }
@@ -88,17 +90,19 @@ class ArticleController extends AdminController {
      */
     public function update(ArticleRequest $request, Article $article)
     {
+        //CsvLogger::csv('has image', ['image' => Input::file('image')], CsvLogger::INFO, CsvLogger::DEBUG);
+
         $article -> user_id = Auth::id();
         $picture = "";
         if(Input::hasFile('image'))
         {
             $file = Input::file('image');
             $filename = $file->getClientOriginalName();
-            $extension = $file -> getClientOriginalExtension();
+            $extension = $file->getClientOriginalExtension();
             $picture = sha1($filename . time()) . '.' . $extension;
         }
-        $article -> picture = $picture;
-        $article -> update($request->except('image'));
+        $article->picture = $picture;
+        $article->update($request->except('image'));
 
         if(Input::hasFile('image'))
         {

@@ -67,7 +67,7 @@ class PhotoController extends AdminController
 
         if ($request->hasFile('image')) {
             $photoalbum = PhotoAlbum::find($request->photo_album_id);
-            $destinationPath = public_path() . '/appfiles/photoalbum/' . $photoalbum->folder_id . '/';
+            $destinationPath = public_path() . '/images/photoalbum/' . $photoalbum->folder_id . '/';
             $request->file('image')->move($destinationPath, $picture);
 
         }
@@ -107,7 +107,7 @@ class PhotoController extends AdminController
 
         if ($request->hasFile('image')) {
             $photoalbum = PhotoAlbum::find($request->photo_album_id);
-            $destinationPath = public_path() . '/appfiles/photoalbum/' . $photoalbum->folder_id . '/';
+            $destinationPath = public_path() . '/images/photoalbum/' . $photoalbum->folder_id . '/';
             $request->file('image')->move($destinationPath, $picture);
         }
     }

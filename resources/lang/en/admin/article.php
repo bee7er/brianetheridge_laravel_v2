@@ -5,7 +5,7 @@ return [
     'introduction' => 'Introduction',
     'content' => 'Content',
     'source' => 'Source',
+    'slug' => 'Slug',
     'picture' => 'Picture',
     'category' => 'Category',
-
 ];

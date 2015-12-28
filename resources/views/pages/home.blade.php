@@ -59,12 +59,12 @@
                            class="hover-effect">
                             @if($item->album_image!="")
                                 <img class="col-sm-12"
-                                        src="{!! URL::to('appfiles/photoalbum/'.$item->folder_id.'/'.$item->album_image) !!}">
+                                        src="{!! URL::to('images/photoalbum/'.$item->folder_id.'/'.$item->album_image) !!}">
                             @elseif($item->album_image_first!="")
                                 <img class="col-sm-12"
-                                     src="{!! URL::to('appfiles/photoalbum/'.$item->folder_id.'/'.$item->album_image_first) !!}">
+                                     src="{!! URL::to('images/photoalbum/'.$item->folder_id.'/'.$item->album_image_first) !!}">
                             @else
-                                <img class="col-sm-12" src="{!! URL::to('appfiles/photoalbum/no_photo.png') !!}">
+                                <img class="col-sm-12" src="{!! URL::to('images/photoalbum/no_photo.png') !!}">
                             @endif
                         </a>
                         <div class=" col-sm-12">{{$item->name}}</div>

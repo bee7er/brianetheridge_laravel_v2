@@ -10,9 +10,18 @@ migrate database changes to the virtual machine:
 
     (vagrant@192.168.10.10's password: vagrant)
     
+Or:
+
+    cd /Users/brianetheridge/Homestead
+    vagrant ssh
+    
 Run MySQL:
 
     mysql -uroot -psecret
+    
+Or:
+
+    mysql -ubee_laravel_v2 -pDandoobly9
     
     (root directory for the vagrant box is /home/vagrant)
     

@@ -58,11 +58,22 @@
                 <span class="help-block">{{ $errors->first('source', ':message') }}</span>
             </div>
         </div>
-        <div
-                class="form-group {!! $errors->has('picture') ? 'error' : '' !!} ">
+        <div class="form-group  {{ $errors->has('slug') ? 'has-error' : '' }}">
+            {!! Form::label('slug', trans("admin/article.slug"), array('class' => 'control-label')) !!}
+            <div class="controls">
+                {!! Form::text('slug', null, array('class' => 'form-control')) !!}
+                <span class="help-block">{{ $errors->first('slug', ':message') }}</span>
+            </div>
+        </div>
+
+        <a href="{!! URL::to('/images/article/'.$article->id.'/'.$article->picture) !!}">
+                 {!! $article->picture !!}
+        </a>
+
+        <div class="form-group {!! $errors->has('picture') ? 'error' : '' !!} ">
             <div class="col-lg-12">
                 {!! Form::label('source', trans("admin/article.picture"), array('class' => 'control-label')) !!}
-                <input name="picture"
+                <input name="image"
                        type="file" class="uploader" id="image" value="Upload"/>
             </div>
 
@@ -86,7 +97,7 @@
         </button>
         <button type="submit" class="btn btn-sm btn-success">
             <span class="glyphicon glyphicon-ok-circle"></span>
-            @if	(isset($news))
+            @if	(isset($article))
                 {{ trans("admin/modal.edit") }}
             @else
                 {{trans("admin/modal.create") }}

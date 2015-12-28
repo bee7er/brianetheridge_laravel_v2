@@ -17,12 +17,12 @@
                             <i class="glyphicon glyphicon-bullhorn fa-3x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">{{$newscategory}}</div>
-                            <div>{{ trans("admin/admin.news_categories") }}!</div>
+                            <div class="huge">{{$articlecategory}}</div>
+                            <div>{{ trans("admin/admin.article_categories") }}!</div>
                         </div>
                     </div>
                 </div>
-                <a href="{{URL::to('admin/newscategory')}}">
+                <a href="{{URL::to('admin/articlecategory')}}">
                     <div class="panel-footer">
                         <span class="pull-left">{{ trans("admin/admin.view_detail") }}</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -40,12 +40,12 @@
                             <i class="glyphicon glyphicon-list fa-3x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">{{$news}}</div>
-                            <div>{{ trans("admin/admin.news_items") }}!</div>
+                            <div class="huge">{{$article}}</div>
+                            <div>{{ trans("admin/admin.article_items") }}!</div>
                         </div>
                     </div>
                 </div>
-                <a href="{{URL::to('admin/news')}}">
+                <a href="{{URL::to('admin/article')}}">
                     <div class="panel-footer">
                         <span class="pull-left">{{ trans("admin/admin.view_detail") }}</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{URL::to('admin/users')}}">
+                <a href="{{URL::to('admin/user')}}">
                     <div class="panel-footer">
                         <span class="pull-left">{{ trans("admin/admin.view_detail") }}</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

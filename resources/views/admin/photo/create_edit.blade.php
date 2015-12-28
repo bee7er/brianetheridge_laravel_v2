@@ -66,8 +66,7 @@
             </div>
         </div>
 
-        <div
-                class="form-group {{ $errors->has('image') ? 'error' : '' }}">
+        <div class="form-group {{ $errors->has('image') ? 'error' : '' }}">
             <div class="col-lg-12">
                 <label class="control-label" for="image">
                     {{ trans("admin/photo.picture") }}</label>
