@@ -21,6 +21,7 @@ var paths = {
     'select2': 'vendor/select2/dist',
     'jquery_ui':  'vendor/jquery-ui',
     'justifiedGallery':  'vendor/Justified-Gallery/dist/',
+    'prettyPhoto':  'vendor/prettyPhoto/',
 };
 
 elixir.config.sourcemaps = false;
@@ -61,6 +62,16 @@ elixir(function(mix) {
         '../../' + paths.colorbox + '/jquery.colorbox.js',
         '../../' + paths.justifiedGallery + '/js/jquery.justifiedGallery.js'
     ], 'public/js/site.js');
+
+    // Merge Special CSSs.
+    mix.styles([
+        '../../' + paths.prettyPhoto + '/prettyPhoto.css',
+    ], 'public/css/imageDisplayer.css');
+
+    // Merge Special scripts.
+    mix.scripts([
+        '../../' + paths.prettyPhoto + '/jquery.prettyPhoto.js'
+    ], 'public/js/imageDisplayer.js');
 
     // Merge Admin CSSs.
     mix.styles([
